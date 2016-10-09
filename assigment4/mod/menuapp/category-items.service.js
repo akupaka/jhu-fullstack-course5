@@ -16,7 +16,7 @@
 				url: (MenuApiBasePath + "/menu_items.json?category=" + categoryId)
 			})
 				.then(function (result) {
-					console.log("result is :", result.data.menu_items);
+					//console.log("result is :", result.data.menu_items);
 					return result.data.menu_items;
 				})
 				.catch(function (error) {
