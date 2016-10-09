@@ -49,6 +49,12 @@
 						return CategoryItemsService.getItems($stateParams.categoryId);
 					}]
 				}
+			})
+			
+			.state('items.itemDetail', {
+				url: '/item-detail/{itemId}',
+				templateUrl: 'mod/menuapp/templates/item-detail.template.html',
+				controller: "ItemDetailController as itemDetail"
 			});
 
 	}
