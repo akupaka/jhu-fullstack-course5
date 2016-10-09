@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" ng-app="MenuApp">
+
+<head>
+  <title>Narrow Down Your Menu Choice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+
+        <div class="navbar-header">
+          <a class="navbar-brand" ui-sref="home">MenuApp</a>
+          <loading-spinner></loading-spinner>
+        </div>
+
+        <!-- not used in this version
+        <div class="collapse navbar-collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search items">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>-->
+        
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <ui-view></ui-view>
+  </div>
+
+  <!-- Libraries -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-ui-router.min.js"></script>
+  <!-- Modules -->
+  <script src="mod/menuapp/menuapp.module.js"></script>
+  <script src="mod/spinner/spinner.module.js"></script>
+  <!-- Routes -->
+  <script src="mod/router/routes.js"></script>
+  <!-- 'MenuApp' module artifacts -->
+  <script src="mod/menuapp/categories.controller.js"></script>
+  <script src="mod/menuapp/categories.service.js"></script>
+  <!-- not used in this version
+    <script src="mod/menuapp/category-detail.controller.js"></script>-->
+  <script src="mod/menuapp/category-items.controller.js"></script>
+  <script src="mod/menuapp/category-items.service.js"></script>
+  <!-- 'Spinner' module artifacts -->
+  <script src="mod/spinner/loadingspinner.component.js"></script>
+</body>
+
+</html>

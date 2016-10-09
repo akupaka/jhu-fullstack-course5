@@ -1,0 +1,23 @@
+<ol class="breadcrumb">
+	<li><a ui-sref="home">Home</a></li>
+	<li><a ui-sref="categories">Categories</a></li>
+	<li class="active">Items</li>
+</ol>
+
+<h2>Category Items</h2>
+
+<div ng-if="categoryItems.items.length > 0">
+	<div class="row">
+
+		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" ng-repeat="item in categoryItems.items">
+			<div class="panel panel-default item-box">
+				<div class="panel-heading">{{ item.name }}</div>
+				<div class="panel-body">{{ item.description }}</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="error" ng-if="categoryItems.items.length == 0">Nothing found</div>
+
+<ui-view></ui-view>
