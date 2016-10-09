@@ -10,7 +10,7 @@
 	function CategoryItemsService($http, MenuApiBasePath) {
 		var service = this;
 		service.getItems = function (categoryId) {
-			console.log("service.getItems fired: ", categoryId);
+			//console.log("service.getItems fired: ", categoryId);
 			return $http({
 				method: "GET",
 				url: (MenuApiBasePath + "/menu_items.json?category=" + categoryId)

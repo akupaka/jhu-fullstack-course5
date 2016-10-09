@@ -8,16 +8,5 @@
 
 <ui-view></ui-view>
 
-<div ng-if="categoryItems.items.length > 0">
-	<div class="row">
+<item-list items="categoryItems.items"></item-list>
 
-		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" ng-repeat="item in categoryItems.items">
-			<div class="panel panel-default item-box" ui-sref="items.itemDetail({itemId: $index})">
-				<div class="panel-heading">{{ item.name }}</div>
-				<div class="panel-body">{{ item.description }}</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-<div class="error" ng-if="categoryItems.items.length == 0">Nothing found</div>
