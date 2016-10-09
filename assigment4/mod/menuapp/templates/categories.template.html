@@ -5,18 +5,6 @@
 
 <h2>Menu Categories</h2>
 
-<div ng-if="categories.items.length > 0">
-	<div class="row">
-
-		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" ng-repeat="item in categories.items">
-				<div class="panel panel-default item-box" ui-sref="items({categoryId: item.short_name})">
-					<div class="panel-heading">{{ item.short_name }}</div>
-					<div class="panel-body">{{ item.name }}</div>
-				</div>
-		</div>
-
-	</div>
-</div>
-<div class="error" ng-if="categories.items.length == 0">Nothing found</div>
+<categories-list items="categories.items"></categories-list>
 
 <!--<ui-view></ui-view>-->
